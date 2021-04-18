@@ -1,0 +1,74 @@
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.test {
+    text-align: center;
+    background-color: #353b48;
+    border-radius: 10px;
+}
+
+.add_integration {
+    margin-top: 200px;
+    text-align: center;
+    height: 100%;
+}
+
+.add_integration h1 {
+    color: white;
+}
+
+.add_integration_buttons {
+    width: 20%;
+    padding-top: 150px;
+    margin: auto;
+}
+
+.add_coinbase_button {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.add_coinbase_button img {
+    width: 30px;
+    height: 30px;
+}
+
+.add_coinbase_button span {
+    color: #0097e6;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .add_integration {
+        margin-top: 100px;
+    }
+
+    .add_integration_buttons {
+        padding-top: 100px;
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .add_integration {
+        margin-top: 100px;
+    }
+
+    .add_integration_buttons {
+        padding-top: 100px;
+        width: 70%;
+    }
+
+}
