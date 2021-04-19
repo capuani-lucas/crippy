@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Router from "next/router";
 import  styles from "./nav-bar.module.css";
 import { useState } from "react";
 
@@ -6,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 import { faBars, faArrowRight} from "@fortawesome/free-solid-svg-icons";
-
-
 
 library.add(faBars, faArrowRight);
 
@@ -28,7 +27,6 @@ export default function NavBar({ ...props }) {
 
   const [menuShowing, setMenuShowing] = useState(false);
 
-  // TODO: Add responsiveness to navbar
 
   return (
 
@@ -50,7 +48,7 @@ export default function NavBar({ ...props }) {
     </div>
 
     <div className={styles.nav_container}>
-      <h2 className={styles.nav_logo}>Crippy</h2>
+      <h2 className={styles.nav_logo} onClick={() => Router.push("/")}>Crippy</h2>
 
       <div className={styles.burger_menu} onClick={() => setMenuShowing(true)}>
         <FontAwesomeIcon icon={['fas', 'bars']}  size="2x" />
@@ -70,3 +68,4 @@ export default function NavBar({ ...props }) {
     </>
   );
 }
+ 

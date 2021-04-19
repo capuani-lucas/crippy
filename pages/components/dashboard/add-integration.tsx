@@ -6,7 +6,9 @@ export default function AddIntegration() {
   return (
     <div className={styles.add_integration}>
       <h1>Link Account</h1>
-
+      <span className={styles.small_text}>Click one of the options below to begin</span>
+      <br></br>
+      <span className={styles.small_text}>You will be able to add more in your settings later</span>
       <div className={styles.add_integration_buttons}>
           <div className={styles.add_coinbase_button} onClick={() => location.href="/test"}>
                 <span>COINBASE</span>
