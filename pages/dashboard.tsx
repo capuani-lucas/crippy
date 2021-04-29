@@ -1,18 +1,19 @@
 import NavBar from "./components/global/nav-bar";
 import styles from "../styles/Dashboard.module.css";
 
-import TopBar from "./components/dashboard/top-bar";
 import AddIntegration from "./components/dashboard/add-integration";
+import { useState } from "react";
+
+import HomeView from "./components/dashboard/home-view";
 
 export default function Dashboard() {
 	const noIntegrations = false;
+	const [page, setPage] = useState("home");
 
 	const sideBarOptions = [
-		"graph",
-		"market",
+		"home",
+		"friends",
 		"my stocks",
-		"buy stocks",
-		"sell stocks",
 		"notifications",
 		"account",
 	];
@@ -21,7 +22,7 @@ export default function Dashboard() {
 		return (
 			<div>
 				<NavBar active="dashboard"></NavBar>
-				<AddIntegration></AddIntegration>
+				<AddIntegration />
 			</div>
 		);
 	}
@@ -35,7 +36,10 @@ export default function Dashboard() {
 					{sideBarOptions.map((v, index) => {
 						return (
 							<div key={index}>
-								<span className={styles.left_side_option}>
+								<span
+									className={styles.left_side_option}
+									onClick={(_) => setPage(v)}
+								>
 									{v.toUpperCase()}
 								</span>
 								<div className={styles.separator}></div>
@@ -44,7 +48,13 @@ export default function Dashboard() {
 					})}
 				</div>
 
-				<div className={styles.right_side}></div>
+				<div className={styles.right_side}>
+					{
+						{
+							home: <HomeView />,
+						}[page]
+					}
+				</div>
 			</div>
 		</div>
 	);
