@@ -5,6 +5,8 @@ import AddIntegration from "./components/dashboard/add-integration";
 import { useState } from "react";
 
 import HomeView from "./components/dashboard/home-view";
+import FriendView from "./components/dashboard/friend-view";
+import NotificationsView from "./components/dashboard/notifications-view";
 
 export default function Dashboard() {
 	const noIntegrations = false;
@@ -49,9 +51,12 @@ export default function Dashboard() {
 				</div>
 
 				<div className={styles.right_side}>
+					{/* Display subpages dynamically */}
 					{
 						{
 							home: <HomeView />,
+							friends: <FriendView />,
+							notifications: <NotificationsView />,
 						}[page]
 					}
 				</div>

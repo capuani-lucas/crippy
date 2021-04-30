@@ -7,7 +7,7 @@ interface TempData {
 	amount: string;
 }
 
-export default function FriendActivity() {
+export default function FriendActivity({ ...props }) {
 	const temporaryData: TempData[] = [
 		{
 			name: "Test 1 2 3 4 5",
@@ -53,6 +53,12 @@ export default function FriendActivity() {
 					</div>
 				);
 			})}
+
+			{props.showMore && (
+				<div className={styles.show_more_activity}>
+					<span className={styles.friend_activity_name}>View More</span>
+				</div>
+			)}
 		</>
 	);
 }
