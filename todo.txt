@@ -1,0 +1,23 @@
+
+DASHBOARD: 
+    API Wrapper ()
+
+    Fetch Data and make pages dynamic ()
+
+    Coinbase OAuth integration ()
+
+    Remove temporary data ()
+
+    Add friend page ()
+
+    "My stocks" page ()
+
+    "Acount" page ()
+
+GENERAL:
+    Search for redundancies ()
+
+    CSS transitions ()
+
+    Create home page, other pages ()
+

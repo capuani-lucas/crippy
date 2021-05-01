@@ -204,6 +204,7 @@
 .create_notification_form_wrapper {
 	background-color: #2f3640;
 	padding: 10px;
+	margin-bottom: 15px;
 }
 
 .create_notification_form_inner {
@@ -218,6 +219,33 @@
 	margin-top: 15px;
 	margin-bottom: 15px;
 	color: white;
+}
+
+.hover {
+	cursor: pointer;
+}
+
+.hover:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.delete_button {
+	border: none;
+	outline: none;
+	padding: 10px;
+	background-color: #b22222;
+	border-radius: 5px;
+	color: black;
+	margin-top: 8px;
+}
+
+.notifications_label {
+	color: white;
+	padding-top: 15px;
+}
+
+.notifications_wrapper {
+	margin-top: 20px;
 }
 
 /* * Media queries  */

@@ -61,8 +61,8 @@ export default function NotificationForm() {
 
 				<input
 					type="submit"
-					value="Submit"
-					className={styles.create_notification_form_coins}
+					value="Create"
+					className={`${styles.create_notification_form_coins} ${styles.hover}`}
 				/>
 			</form>
 		</div>
